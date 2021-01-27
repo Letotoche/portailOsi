@@ -19,10 +19,10 @@ main {
     grid-area: main;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 580px) {
     body{
         grid-template-columns:  1fr;
-        grid-template-rows: 3rem  1fr 3rem;
+        grid-template-rows: 3rem  minmax(400px,1fr) 3rem;
         grid-template-areas:   
             "header"
             "main"

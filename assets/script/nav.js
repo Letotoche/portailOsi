@@ -7,3 +7,7 @@ function activation(elem) {
     [].forEach.call(sections, sectElem => sectElem.hidden = true);
     document.getElementById(idDest).removeAttribute('hidden');
 }
+
+function ouvrir(lien) {
+    window.open(lien);
+}

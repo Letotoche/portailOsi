@@ -5,7 +5,9 @@
     --bg-col-sel:#0074af;
     --col-sel-dark:#025077;
 
-    --w-prem-col: 10rem;
+    --w-prem-col: 6rem;
+    --w-card: 220px;
+    --h-card: 125px;
 }
 
 html {
@@ -96,20 +98,21 @@ main {
 
 /*---- links ----*/
 .link-container{
+    height: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-content: stretch;
+    justify-content: space-evenly;
+    /* align-content: stretch; */
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: flex-start;
 }
 
 .card-link {
     flex: 0 0 auto;
-    min-width: 200px;
-    height: 100px;
+    min-width: var(--w-card);
+    height: var(--h-card);
     background-color: #fff;
     border-radius: 10px;
     box-shadow: -4px 4px 10px  rgba(0, 0, 0, 0.2);
@@ -118,9 +121,26 @@ main {
     margin-bottom: 10px;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
+    background-image: url('../image/screen-osi.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
-.card-link a {
+.card-link:hover {
+    /* background-color: red; */
+    min-width: calc(var(--w-card) + 12px);
+    height: calc(var(--h-card) + 12px);
+    margin: 0 -1px;
+    margin-top: -6px;
+    box-shadow: -10px 10px 20px  rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    background-size: 100% auto;
+    transition: all 0.2s;
+}
+
+.card-link span {
     display: block;
     text-decoration: none;
     background-color: var(--col-sel-dark);
@@ -134,7 +154,13 @@ main {
 }
 
 /* RESPONSIVE */
-@media (max-width: 550px) {
+@media (max-width: 580px) {
+
+    :root {
+        --w-card: 170px;
+        --h-card: 100px;
+    }
+    
     header .logo img {
         height: 1.625rem;
     }
@@ -144,17 +170,17 @@ main {
     
     nav.env ul {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
         grid-template-rows: auto;
         height: 100%;
     }
 
     nav.env ul li {        
-        height: 100%;
+        height: calc(100% - 4px);
     }
     
     nav.env ul li.actif {
-        border-top: 4px solid var(--col-sel-dark);
+        border-top: 4px solid var(--col-sel-dark);        
     }
 
     nav.env ul li{
@@ -164,7 +190,7 @@ main {
 }
 
 /* RESPONSIVE */
-@media (min-width: 550px) {
+@media (min-width: 580px) {
     nav.env ul li { 
         height: 50px; 
     }
