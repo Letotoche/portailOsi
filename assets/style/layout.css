@@ -18,3 +18,14 @@ nav.env {
 main {
     grid-area: main;
 }
+
+@media (max-width: 550px) {
+    body{
+        grid-template-columns:  1fr;
+        grid-template-rows: 3rem  1fr 3rem;
+        grid-template-areas:   
+            "header"
+            "main"
+            "nav";
+    }
+}
