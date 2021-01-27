@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail Osi</title>
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/layout.css">
+    <script src="assets/script/nav.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img alt="SNCF" src="assets/image/sncf-logo.png">
+        </div>
+        <h1>Portail Osi</h1>
+        <div></div>
+    </header>
+    <nav class="env">
+        <ul>
+            <li class="actif" data-dest="liens-dev" aria onclick="activation(this)">Développement</li>
+            <li data-dest="liens-ri" onclick="activation(this)">RI</li>
+            <li data-dest="liens-ru" onclick="activation(this)">RU</li>
+        </ul>
+    </nav>
+    <main>
+        <section class="link-area" id="liens-dev">
+            <h1>Liens de l'environnement de développement</h1>
+            <div class="car-link">
+                <a href="http://">Gare</a>
+            </div>
+            <div class="car-link">
+                <a href="http://">Fret</a>
+            </div>
+        </section>
+
+        <section class="link-area" id="liens-ri" hidden>
+            <h1>Liens de l'environnement de RI</h1>
+            <div class="car-link">
+                <a href="http://">Gare</a>
+            </div>
+            <div class="car-link">
+                <a href="http://">Fret</a>
+            </div>
+        </section>
+
+        <section class="link-area" id="liens-ru" hidden>
+            <h1>Liens de l'environnement de RU</h1>
+            <div class="car-link">
+                <a href="http://">Gare</a>
+            </div>
+            <div class="car-link">
+                <a href="http://">Fret</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
